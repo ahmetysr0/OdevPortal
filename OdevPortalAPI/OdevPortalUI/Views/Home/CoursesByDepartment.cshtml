@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Bölüme Göre Dersler";
+}
+<h3>Bölüme Göre Dersler</h3>
+<select id="departmentSelect" class="form-select w-auto mb-3"></select>
+<div id="coursesByDept"></div>
+<script>
+    let token = localStorage.getItem("token");
+    function loadDepartments() {
+        fetch("https://localhost:7133/api/Departments", { headers: { "Authorization": "Bearer " + token } })
+        .then(r => r.json())
+        .then(data => {
+            let sel = document.getElementById("departmentSelect");
+            sel.innerHTML = data.map(d => `<option value="${d.id}">${d.name}</option>`).join("");
+            loadCoursesByDepartment();
+        });
+    }
+    function loadCoursesByDepartment() {
+        let deptId = document.getElementById("departmentSelect").value;
+        fetch(`https://localhost:7133/api/Courses/department/${deptId}`, {
+            headers: { "Authorization": "Bearer " + token }
+        })
+        .then(r => r.json())
+        .then(data => {
+            let html = '<table class="table"><thead><tr><th>Ad</th><th>Açıklama</th><th>İşlem</th></tr></thead><tbody>';
+            data.forEach(course => {
+                html += `<tr>
+                    <td>${course.name}</td>
+                    <td>${course.description}</td>
+                    <td><a class="btn btn-info btn-sm" href="/Home/CourseDetail?id=${course.id}">Detay</a></td>
+                </tr>`;
+            });
+            html += '</tbody></table>';
+            document.getElementById("coursesByDept").innerHTML = html;
+        });
+    }
+    document.getElementById("departmentSelect").addEventListener("change", loadCoursesByDepartment);
+    loadDepartments();
+</script>

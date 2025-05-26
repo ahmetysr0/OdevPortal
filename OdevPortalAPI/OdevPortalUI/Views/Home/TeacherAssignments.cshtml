@@ -1,0 +1,62 @@
+﻿@{
+    ViewData["Title"] = "Verdiğim Ödevler";
+}
+<h3>Verdiğim Ödevler</h3>
+<div id="teacherAssignmentList"></div>
+<hr>
+<button class="btn btn-primary mb-2" id="showAddAssignment">Yeni Ödev Ekle</button>
+<div id="addAssignmentForm" style="display:none;">
+    <input type="text" class="form-control mb-1" id="assignmentTitle" placeholder="Başlık">
+    <textarea class="form-control mb-1" id="assignmentDescription" placeholder="Açıklama"></textarea>
+    <input type="date" class="form-control mb-1" id="assignmentDeadline">
+    <button class="btn btn-success" id="saveAssignment">Ödevi Kaydet</button>
+</div>
+<div id="addResult"></div>
+<script>
+    let token = localStorage.getItem("token");
+    function loadTeacherAssignments() {
+        fetch("https://localhost:7133/api/Assignments/teacher", {
+            headers: { "Authorization": "Bearer " + token }
+        })
+        .then(r => r.ok ? r.json() : Promise.reject("Ödevler alınamadı."))
+        .then(data => {
+            let html = '<table class="table table-bordered"><thead><tr><th>Başlık</th><th>Açıklama</th><th>Teslim Tarihi</th></tr></thead><tbody>';
+            data.forEach(assign => {
+                html += `<tr>
+                    <td>${assign.title}</td>
+                    <td>${assign.description}</td>
+                    <td>${assign.deadline ? assign.deadline.split('T')[0] : ''}</td>
+                </tr>`;
+            });
+            html += '</tbody></table>';
+            document.getElementById("teacherAssignmentList").innerHTML = html;
+        })
+        .catch(err => document.getElementById("teacherAssignmentList").innerHTML =
+            `<div class="alert alert-danger">${err}</div>`);
+    }
+    document.getElementById("showAddAssignment").onclick = function() {
+        document.getElementById("addAssignmentForm").style.display = "";
+    };
+    document.getElementById("saveAssignment").onclick = function() {
+        let title = document.getElementById("assignmentTitle").value;
+        let description = document.getElementById("assignmentDescription").value;
+        let deadline = document.getElementById("assignmentDeadline").value;
+        fetch("https://localhost:7133/api/Assignments", {
+            method: "POST",
+            headers: {
+                "Authorization": "Bearer " + token,
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ title, description, deadline })
+        })
+        .then(r => r.ok ? r.json() : Promise.reject("Ödev eklenemedi."))
+        .then(() => {
+            loadTeacherAssignments();
+            document.getElementById("addAssignmentForm").style.display = "none";
+            document.getElementById("addResult").innerHTML = '<div class="alert alert-success">Ödev kaydedildi!</div>';
+        })
+        .catch(err => document.getElementById("addResult").innerHTML =
+            `<div class="alert alert-danger">${err}</div>`);
+    };
+    loadTeacherAssignments();
+</script>

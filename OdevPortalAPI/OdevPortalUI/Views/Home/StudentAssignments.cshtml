@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Bana Atanan Ödevler";
+}
+<h3>Bana Atanan Ödevler</h3>
+<div id="studentAssignmentList"></div>
+<script>
+    let token = localStorage.getItem("token");
+    function loadStudentAssignments() {
+        fetch("https://localhost:7133/api/Assignments/student", {
+            headers: { "Authorization": "Bearer " + token }
+        })
+        .then(r => r.ok ? r.json() : Promise.reject("Ödevler alınamadı."))
+        .then(data => {
+            let html = '<table class="table table-bordered"><thead><tr><th>Başlık</th><th>Açıklama</th><th>Teslim Tarihi</th><th>Teslim</th></tr></thead><tbody>';
+            data.forEach(assign => {
+                html += `<tr>
+                    <td>${assign.title}</td>
+                    <td>${assign.description}</td>
+                    <td>${assign.deadline ? assign.deadline.split('T')[0] : ''}</td>
+                    <td><button class="btn btn-sm btn-info" onclick="submitAssignment('${assign.id}')">Teslim Et</button></td>
+                </tr>`;
+            });
+            html += '</tbody></table>';
+            document.getElementById("studentAssignmentList").innerHTML = html;
+        })
+        .catch(err => document.getElementById("studentAssignmentList").innerHTML =
+            `<div class="alert alert-danger">${err}</div>`);
+    }
+    window.submitAssignment = function(assignmentId) {
+        // Burada ödev teslimi için modal veya upload alanı açabilirsin
+        alert("Ödev teslimi paneli burada olacak! (API: /api/Assignments/submit)");
+    }
+    loadStudentAssignments();
+</script>

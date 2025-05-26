@@ -1,0 +1,275 @@
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\appsettings.json
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\OdevDagitimPortalAPI.staticwebassets.endpoints.json
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\OdevDagitimPortalAPI.exe
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\OdevDagitimPortalAPI.deps.json
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\OdevDagitimPortalAPI.runtimeconfig.json
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\OdevDagitimPortalAPI.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\OdevDagitimPortalAPI.pdb
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\AutoMapper.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\Azure.Core.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\Azure.Identity.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\Humanizer.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.Design.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.Design.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\System.Drawing.Common.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\System.Memory.Data.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\System.Runtime.Caching.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\System.Security.Permissions.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\System.Windows.Extensions.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\obj\Debug\net7.0\OdevDagitimPortalAPI.csproj.AssemblyReference.cache
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\obj\Debug\net7.0\OdevDagitimPortalAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\obj\Debug\net7.0\OdevDagitimPortalAPI.AssemblyInfoInputs.cache
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\obj\Debug\net7.0\OdevDagitimPortalAPI.AssemblyInfo.cs
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\obj\Debug\net7.0\OdevDagitimPortalAPI.csproj.CoreCompileInputs.cache
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\obj\Debug\net7.0\OdevDagitimPortalAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\obj\Debug\net7.0\OdevDagitimPortalAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\obj\Debug\net7.0\scopedcss\bundle\OdevDagitimPortalAPI.styles.css
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\obj\Debug\net7.0\staticwebassets.build.endpoints.json
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\obj\Debug\net7.0\staticwebassets\msbuild.OdevDagitimPortalAPI.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\obj\Debug\net7.0\staticwebassets\msbuild.OdevDagitimPortalAPI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\obj\Debug\net7.0\staticwebassets\msbuild.build.OdevDagitimPortalAPI.props
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.OdevDagitimPortalAPI.props
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.OdevDagitimPortalAPI.props
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\obj\Debug\net7.0\staticwebassets.upToDateCheck.txt
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\obj\Debug\net7.0\OdevDagi.891083C6.Up2Date
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\obj\Debug\net7.0\OdevDagitimPortalAPI.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\obj\Debug\net7.0\refint\OdevDagitimPortalAPI.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\obj\Debug\net7.0\OdevDagitimPortalAPI.pdb
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\obj\Debug\net7.0\OdevDagitimPortalAPI.genruntimeconfig.cache
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI\OdevDagitimPortalAPI\obj\Debug\net7.0\ref\OdevDagitimPortalAPI.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\appsettings.json
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\OdevDagitimPortalAPI.staticwebassets.endpoints.json
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\OdevDagitimPortalAPI.exe
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\OdevDagitimPortalAPI.deps.json
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\OdevDagitimPortalAPI.runtimeconfig.json
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\OdevDagitimPortalAPI.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\OdevDagitimPortalAPI.pdb
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\AutoMapper.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\Azure.Core.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\Azure.Identity.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\Humanizer.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.Design.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.Design.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\System.Drawing.Common.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\System.Memory.Data.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\System.Runtime.Caching.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\System.Security.Permissions.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\System.Windows.Extensions.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\obj\Debug\net7.0\OdevDagitimPortalAPI.csproj.AssemblyReference.cache
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\obj\Debug\net7.0\OdevDagitimPortalAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\obj\Debug\net7.0\OdevDagitimPortalAPI.AssemblyInfoInputs.cache
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\obj\Debug\net7.0\OdevDagitimPortalAPI.AssemblyInfo.cs
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\obj\Debug\net7.0\OdevDagitimPortalAPI.csproj.CoreCompileInputs.cache
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\obj\Debug\net7.0\OdevDagitimPortalAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\obj\Debug\net7.0\OdevDagitimPortalAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\obj\Debug\net7.0\OdevDagitimPortalAPI.sourcelink.json
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\obj\Debug\net7.0\scopedcss\bundle\OdevDagitimPortalAPI.styles.css
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\obj\Debug\net7.0\staticwebassets.build.endpoints.json
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\obj\Debug\net7.0\staticwebassets\msbuild.OdevDagitimPortalAPI.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\obj\Debug\net7.0\staticwebassets\msbuild.OdevDagitimPortalAPI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\obj\Debug\net7.0\staticwebassets\msbuild.build.OdevDagitimPortalAPI.props
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.OdevDagitimPortalAPI.props
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.OdevDagitimPortalAPI.props
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\obj\Debug\net7.0\staticwebassets.upToDateCheck.txt
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\obj\Debug\net7.0\OdevDagi.891083C6.Up2Date
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\obj\Debug\net7.0\OdevDagitimPortalAPI.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\obj\Debug\net7.0\refint\OdevDagitimPortalAPI.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\obj\Debug\net7.0\OdevDagitimPortalAPI.pdb
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\obj\Debug\net7.0\OdevDagitimPortalAPI.genruntimeconfig.cache
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalAPI\obj\Debug\net7.0\ref\OdevDagitimPortalAPI.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\appsettings.json
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\OdevDagitimPortalAPI.staticwebassets.endpoints.json
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\OdevDagitimPortalAPI.exe
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\OdevDagitimPortalAPI.deps.json
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\OdevDagitimPortalAPI.runtimeconfig.json
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\OdevDagitimPortalAPI.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\OdevDagitimPortalAPI.pdb
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\AutoMapper.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\Azure.Core.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\Azure.Identity.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\Humanizer.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.Design.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.Design.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\System.Drawing.Common.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\System.Memory.Data.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\System.Runtime.Caching.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\System.Security.Permissions.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\System.Windows.Extensions.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\obj\Debug\net7.0\OdevDagitimPortalAPI.csproj.AssemblyReference.cache
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\obj\Debug\net7.0\OdevDagitimPortalAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\obj\Debug\net7.0\OdevDagitimPortalAPI.AssemblyInfoInputs.cache
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\obj\Debug\net7.0\OdevDagitimPortalAPI.AssemblyInfo.cs
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\obj\Debug\net7.0\OdevDagitimPortalAPI.csproj.CoreCompileInputs.cache
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\obj\Debug\net7.0\OdevDagitimPortalAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\obj\Debug\net7.0\OdevDagitimPortalAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\obj\Debug\net7.0\OdevDagitimPortalAPI.sourcelink.json
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\obj\Debug\net7.0\scopedcss\bundle\OdevDagitimPortalAPI.styles.css
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\obj\Debug\net7.0\staticwebassets.build.endpoints.json
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\obj\Debug\net7.0\staticwebassets\msbuild.OdevDagitimPortalAPI.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\obj\Debug\net7.0\staticwebassets\msbuild.OdevDagitimPortalAPI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\obj\Debug\net7.0\staticwebassets\msbuild.build.OdevDagitimPortalAPI.props
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.OdevDagitimPortalAPI.props
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.OdevDagitimPortalAPI.props
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\obj\Debug\net7.0\staticwebassets.upToDateCheck.txt
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\obj\Debug\net7.0\OdevDagi.891083C6.Up2Date
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\obj\Debug\net7.0\OdevDagitimPortalAPI.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\obj\Debug\net7.0\refint\OdevDagitimPortalAPI.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\obj\Debug\net7.0\OdevDagitimPortalAPI.pdb
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\obj\Debug\net7.0\OdevDagitimPortalAPI.genruntimeconfig.cache
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalAPI\obj\Debug\net7.0\ref\OdevDagitimPortalAPI.dll

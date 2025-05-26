@@ -1,0 +1,113 @@
+﻿@{
+    ViewData["Title"] = "Tüm Ödevler";
+}
+<h3>Tüm Ödevler</h3>
+<div id="assignmentTable"></div>
+<div class="mb-2">
+    <button class="btn btn-success" id="addAssignmentBtn" style="display:none;">Yeni Ödev Ekle</button>
+</div>
+<div id="addAssignmentForm" style="display:none;">
+    <input type="text" class="form-control mb-1" id="assignmentTitle" placeholder="Başlık">
+    <textarea class="form-control mb-1" id="assignmentDescription" placeholder="Açıklama"></textarea>
+    <input type="date" class="form-control mb-1" id="assignmentDeadline">
+    <select class="form-control mb-1" id="assignmentCourse"></select>
+    <button class="btn btn-primary" id="saveAssignment">Kaydet</button>
+    <button class="btn btn-secondary" onclick="document.getElementById('addAssignmentForm').style.display='none'">İptal</button>
+</div>
+<div id="assignmentMsg"></div>
+<script>
+    let token = localStorage.getItem("token");
+    let userInfo = JSON.parse(localStorage.getItem("userInfo") || "null");
+
+    function loadAssignments() {
+        fetch("https://localhost:7133/api/Assignments", { headers: { "Authorization": "Bearer " + token } })
+        .then(r => r.ok ? r.json() : Promise.reject("Ödevler alınamadı."))
+        .then(data => {
+            let html = '<table class="table table-bordered"><thead><tr><th>Başlık</th><th>Açıklama</th><th>Ders</th><th>Teslim Tarihi</th><th>İşlem</th></tr></thead><tbody>';
+            data.forEach(assign => {
+                html += `<tr>
+                    <td><a href="/Home/AssignmentDetail?id=${assign.id}">${assign.title}</a></td>
+                    <td>${assign.description}</td>
+                    <td>${assign.courseName || "-"}</td>
+                    <td>${assign.deadline ? assign.deadline.split('T')[0] : ''}</td>
+                    <td>
+                        <a class="btn btn-info btn-sm" href="/Home/AssignmentDetail?id=${assign.id}">Detay</a>
+                        ${(userInfo && (userInfo.roles.includes("Teacher") || userInfo.roles.includes("Admin"))) ?
+                        `<button class="btn btn-warning btn-sm ms-1" onclick="editAssignment('${assign.id}')">Düzenle</button>
+                        <button class="btn btn-danger btn-sm ms-1" onclick="deleteAssignment('${assign.id}')">Sil</button>` : ""}
+                    </td>
+                </tr>`;
+            });
+            html += '</tbody></table>';
+            document.getElementById("assignmentTable").innerHTML = html;
+        })
+        .catch(err => document.getElementById("assignmentTable").innerHTML =
+            `<div class="alert alert-danger">${err}</div>`);
+    }
+
+    function loadCoursesSelect() {
+        fetch("https://localhost:7133/api/Courses", { headers: { "Authorization": "Bearer " + token } })
+        .then(r => r.json())
+        .then(data => {
+            let select = document.getElementById("assignmentCourse");
+            select.innerHTML = '<option value="">Ders Seçiniz</option>' +
+                data.map(c => `<option value="${c.id}">${c.name}</option>`).join("");
+        });
+    }
+
+    if (userInfo && (userInfo.roles.includes("Teacher") || userInfo.roles.includes("Admin"))) {
+        document.getElementById("addAssignmentBtn").style.display = "";
+        document.getElementById("addAssignmentBtn").onclick = function() {
+            document.getElementById("addAssignmentForm").style.display = "";
+            loadCoursesSelect();
+        };
+        document.getElementById("saveAssignment").onclick = function() {
+            let title = document.getElementById("assignmentTitle").value.trim();
+            let description = document.getElementById("assignmentDescription").value.trim();
+            let deadline = document.getElementById("assignmentDeadline").value;
+            let courseId = document.getElementById("assignmentCourse").value;
+
+            if(!title || !description || !deadline || !courseId) {
+                document.getElementById("assignmentMsg").innerHTML = '<div class="alert alert-danger">Tüm alanları doldurmalısınız.</div>';
+                return;
+            }
+
+            fetch("https://localhost:7133/api/Assignments", {
+                method: "POST",
+                headers: {
+                    "Authorization": "Bearer " + token,
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ title, description, deadline, courseId })
+            })
+            .then(r => {
+                if (r.ok) {
+                    loadAssignments();
+                    document.getElementById("addAssignmentForm").style.display = "none";
+                    document.getElementById("assignmentMsg").innerHTML = '<div class="alert alert-success">Ödev eklendi!</div>';
+                } else {
+                    return r.text().then(t => { throw (t ? t : "Ödev eklenemedi.") });
+                }
+            })
+            .catch(err => document.getElementById("assignmentMsg").innerHTML =
+                `<div class="alert alert-danger">${err}</div>`);
+        };
+    }
+
+    window.deleteAssignment = function(id) {
+        if (!confirm("Silmek istediğinize emin misiniz?")) return;
+        fetch(`https://localhost:7133/api/Assignments/${id}`, {
+            method: "DELETE",
+            headers: { "Authorization": "Bearer " + token }
+        })
+        .then(r => {
+            if (r.ok) loadAssignments();
+            else throw "Silinemedi.";
+        })
+        .catch(err => alert(err));
+    };
+
+    // editAssignment fonksiyonunu AssignmentDetail.cshtml'de detaylı vereceğim.
+
+    loadAssignments();
+</script>

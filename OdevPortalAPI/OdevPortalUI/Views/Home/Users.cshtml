@@ -1,0 +1,216 @@
+﻿@{
+    ViewData["Title"] = "Kullanıcı Yönetimi";
+}
+<h3>Kullanıcı Listesi</h3>
+<div class="mb-2">
+    <button class="btn btn-success" id="addUserBtn">Kullanıcı Ekle</button>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Kullanıcı Adı</th>
+            <th>Email</th>
+            <th>Roller</th>
+            <th>İşlem</th>
+        </tr>
+    </thead>
+    <tbody id="userListBody"></tbody>
+</table>
+
+<!-- Kullanıcı Ekle/Düzenle Modalı -->
+<div id="userModal" style="display:none; position:fixed; left:40vw; top:20vh; z-index:1000; background:white; border:1px solid #ccc; padding:2rem; box-shadow: 0 0 8px #aaa;">
+    <h5 id="userModalTitle">Kullanıcı Ekle</h5>
+    <input type="hidden" id="userId">
+    <input type="text" class="form-control mb-1" id="userName" placeholder="Kullanıcı Adı">
+    <input type="email" class="form-control mb-1" id="userEmail" placeholder="Email">
+    <input type="password" class="form-control mb-1" id="userPassword" placeholder="Şifre">
+    <select class="form-control mb-1" id="userRole">
+        <option value="">Rol Seçiniz</option>
+        <option value="Student">Student</option>
+        <option value="Teacher">Teacher</option>
+        <option value="Admin">Admin</option>
+    </select>
+    <div id="userModalMsg"></div>
+    <button class="btn btn-primary" id="saveUserBtn">Kaydet</button>
+    <button class="btn btn-secondary" onclick="closeUserModal()">İptal</button>
+</div>
+
+<!-- Rol Yönet Modalı -->
+<div id="roleModal" style="display:none; position:fixed; left:42vw; top:24vh; z-index:1000; background:white; border:1px solid #ccc; padding:2rem; box-shadow: 0 0 8px #aaa;">
+    <h5>Rol Yönet</h5>
+    <input type="hidden" id="roleUserId">
+    <div id="roleCurrent"></div>
+    <select class="form-control mb-1" id="roleSelect">
+        <option value="">Rol Seçiniz</option>
+        <option value="Student">Student</option>
+        <option value="Teacher">Teacher</option>
+        <option value="Admin">Admin</option>
+    </select>
+    <div id="roleModalMsg"></div>
+    <button class="btn btn-primary" onclick="saveRole()">Kaydet</button>
+    <button class="btn btn-secondary" onclick="closeRoleModal()">İptal</button>
+</div>
+
+<script>
+    let token = localStorage.getItem("token");
+
+    function loadUsers() {
+        fetch("https://localhost:7133/api/Auth/users", { headers: { "Authorization": "Bearer " + token } })
+        .then(r => r.json())
+        .then(users => {
+            let tbody = document.getElementById("userListBody");
+            tbody.innerHTML = "";
+            users.forEach(u => {
+                let roles = (u.roles || []).join(", ");
+                let row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${u.userName}</td>
+                    <td>${u.email}</td>
+                    <td>${roles}</td>
+                    <td>
+                        <button class="btn btn-sm btn-warning" onclick="editUser('${u.id}')">Düzenle</button>
+                        <button class="btn btn-sm btn-danger" onclick="deleteUser('${u.id}')">Sil</button>
+                        <button class="btn btn-sm btn-secondary" onclick="manageRole('${u.id}', '${u.userName}', '${roles}')">Rol Yönet</button>
+                    </td>
+                `;
+                tbody.appendChild(row);
+            });
+        });
+    }
+
+    // Ekle
+    document.getElementById("addUserBtn").onclick = function() {
+        document.getElementById("userModalTitle").innerText = "Kullanıcı Ekle";
+        document.getElementById("userId").value = "";
+        document.getElementById("userName").value = "";
+        document.getElementById("userEmail").value = "";
+        document.getElementById("userPassword").style.display = "";
+        document.getElementById("userPassword").value = "";
+        document.getElementById("userRole").value = "";
+        document.getElementById("userModal").style.display = "";
+        document.getElementById("userModalMsg").innerHTML = "";
+    };
+
+    document.getElementById("saveUserBtn").onclick = function() {
+        let userId = document.getElementById("userId").value;
+        let userName = document.getElementById("userName").value.trim();
+        let email = document.getElementById("userEmail").value.trim();
+        let password = document.getElementById("userPassword").value;
+        let role = document.getElementById("userRole").value;
+
+        if(!userName || !email || (!userId && !password) || !role) {
+            document.getElementById("userModalMsg").innerHTML = '<div class="alert alert-danger">Tüm alanları doldurunuz.</div>';
+            return;
+        }
+        let url = "https://localhost:7133/api/Auth/users";
+        let method = userId ? "PUT" : "POST";
+        let body = {
+            userName: userName,
+            email: email,
+            roles: [role]
+        };
+        if (!userId) body.password = password;
+        if (userId) {
+            url += "/" + userId;
+            body.id = userId;
+        }
+
+        fetch(url, {
+            method: method,
+            headers: {
+                "Authorization": "Bearer " + token,
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(body)
+        })
+        .then(r => {
+            if (r.ok) {
+                closeUserModal();
+                loadUsers();
+            }
+            else return r.text().then(t => { throw t; });
+        })
+        .catch(e => document.getElementById("userModalMsg").innerHTML = `<div class="alert alert-danger">${e}</div>`);
+    };
+
+    function closeUserModal() {
+        document.getElementById("userModal").style.display = "none";
+    }
+
+    // DÜZENLE
+    function editUser(userId) {
+        fetch("https://localhost:7133/api/Auth/users/" + userId, { headers: { "Authorization": "Bearer " + token } })
+        .then(r => {
+            if (!r.ok) throw new Error("Kullanıcı bulunamadı.");
+            return r.json();
+        })
+        .then(u => {
+            document.getElementById("userModalTitle").innerText = "Kullanıcı Düzenle";
+            document.getElementById("userId").value = u.id;
+            document.getElementById("userName").value = u.userName;
+            document.getElementById("userEmail").value = u.email;
+            document.getElementById("userPassword").value = ""; // Şifre değiştirme burada yok
+            document.getElementById("userPassword").style.display = "none";
+            document.getElementById("userRole").value = (u.roles && u.roles.length === 1) ? u.roles[0] : "";
+            document.getElementById("userModal").style.display = "";
+            document.getElementById("userModalMsg").innerHTML = "";
+        })
+        .catch(e => alert("Kullanıcı bulunamadı veya hata oluştu."));
+    }
+
+    // SİL
+    function deleteUser(id) {
+        if (!confirm("Bu kullanıcı silinsin mi?")) return;
+        fetch("https://localhost:7133/api/Auth/users/" + id, {
+            method: "DELETE",
+            headers: { "Authorization": "Bearer " + token }
+        })
+        .then(r => {
+            if (r.ok) loadUsers();
+            else alert("Silinemedi!");
+        });
+    }
+
+    // ROL YÖNET
+    function manageRole(userId, userName, currentRoles) {
+        document.getElementById("roleUserId").value = userId;
+        document.getElementById("roleCurrent").innerHTML = `<b>${userName}</b> kullanıcısının mevcut rol(leri): <i>${currentRoles}</i>`;
+        document.getElementById("roleSelect").value = "";
+        document.getElementById("roleModal").style.display = "";
+        document.getElementById("roleModalMsg").innerHTML = "";
+    }
+
+    function closeRoleModal() {
+        document.getElementById("roleModal").style.display = "none";
+    }
+
+    // ROL KAYDET
+    function saveRole() {
+        let userId = document.getElementById("roleUserId").value;
+        let newRole = document.getElementById("roleSelect").value;
+        if (!newRole) {
+            document.getElementById("roleModalMsg").innerHTML = '<div class="alert alert-danger">Rol seçiniz.</div>';
+            return;
+        }
+
+        fetch("https://localhost:7133/api/Auth/users/" + userId + "/roles", {
+            method: "PUT",
+            headers: {
+                "Authorization": "Bearer " + token,
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify([newRole])
+        })
+        .then(r => {
+            if (r.ok) {
+                closeRoleModal();
+                loadUsers();
+            } else {
+                return r.text().then(t => { throw t; });
+            }
+        })
+        .catch(e => document.getElementById("roleModalMsg").innerHTML = `<div class="alert alert-danger">${e}</div>`);
+    }
+
+    loadUsers();
+</script>

@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Verdiğim Dersler";
+}
+<h3>Verdiğim Dersler</h3>
+<div id="teacherCourses"></div>
+<script>
+    let token = localStorage.getItem("token");
+    function loadTeacherCourses() {
+        fetch("https://localhost:7133/api/Courses/teacher", {
+            headers: { "Authorization": "Bearer " + token }
+        })
+        .then(r => r.ok ? r.json() : Promise.reject("Dersler alınamadı."))
+        .then(data => {
+            let html = '<table class="table"><thead><tr><th>Ad</th><th>Açıklama</th><th>İşlem</th></tr></thead><tbody>';
+            data.forEach(course => {
+                html += `<tr>
+                    <td>${course.name}</td>
+                    <td>${course.description}</td>
+                    <td>
+                        <a class="btn btn-info btn-sm" href="/Home/CourseDetail?id=${course.id}">Detay</a>
+                    </td>
+                </tr>`;
+            });
+            html += '</tbody></table>';
+            document.getElementById("teacherCourses").innerHTML = html;
+        })
+        .catch(err => document.getElementById("teacherCourses").innerHTML = `<div class="alert alert-danger">${err}</div>`);
+    }
+    loadTeacherCourses();
+</script>

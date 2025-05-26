@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Teslim Detay";
+}
+<div id="submissionDetail"></div>
+<script>
+    let token = localStorage.getItem("token");
+    let params = new URLSearchParams(window.location.search);
+    let submissionId = params.get("id");
+    function loadSubmission() {
+        fetch(`https://localhost:7133/api/Submissions/${submissionId}`, {
+            headers: { "Authorization": "Bearer " + token }
+        })
+        .then(r => r.json())
+        .then(sub => {
+            let html = `<div class="card card-body mb-2">
+                <b>Ödev:</b> ${sub.assignmentTitle || "-"} <br>
+                <b>Öğrenci:</b> ${sub.studentName || "-"} <br>
+                <b>İçerik:</b> ${sub.content || "-"} <br>
+                <b>Puan:</b> ${sub.grade || "-"}
+            </div>`;
+            document.getElementById("submissionDetail").innerHTML = html;
+        });
+    }
+    loadSubmission();
+</script>

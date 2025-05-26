@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "OdevPortalAPI\\OdevPortalAPI.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "OdevPortalUI\\OdevPortalUI.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

@@ -1,0 +1,181 @@
+﻿@{
+    ViewData["Title"] = "Ödev Detay";
+}
+<div id="assignmentDetail"></div>
+<div id="editAssignmentForm" style="display:none;"></div>
+<div id="submissionsList"></div>
+<script>
+    let token = localStorage.getItem("token");
+    let params = new URLSearchParams(window.location.search);
+    let assignmentId = params.get("id");
+    let userInfo = JSON.parse(localStorage.getItem("userInfo") || "null");
+    function loadAssignment() {
+        fetch(`https://localhost:7133/api/Assignments/${assignmentId}`, {
+            headers: { "Authorization": "Bearer " + token }
+        })
+        .then(r => r.json())
+        .then(assign => {
+            let html = `<div class="card card-body mb-2">
+                <b>Başlık:</b> ${assign.title} <br>
+                <b>Açıklama:</b> ${assign.description} <br>
+                <b>Ders:</b> ${assign.courseName || "-"} <br>
+                <b>Teslim Tarihi:</b> ${assign.deadline ? assign.deadline.split('T')[0] : ""}
+                ${(userInfo && (userInfo.roles.includes("Teacher") || userInfo.roles.includes("Admin"))) ? 
+                    `<button class="btn btn-warning btn-sm ms-3" onclick="showEditForm()">Düzenle</button>
+                     <button class="btn btn-danger btn-sm ms-1" onclick="deleteAssignment()">Sil</button>` : ""}
+            </div>`;
+            document.getElementById("assignmentDetail").innerHTML = html;
+            if (userInfo.roles.includes("Teacher") || userInfo.roles.includes("Admin")) {
+                loadSubmissions();
+            } else if (userInfo.roles.includes("Student")) {
+                document.getElementById("assignmentDetail").innerHTML += `<button class="btn btn-primary" onclick="showSubmissionForm()">Teslim Et</button>`;
+                loadMySubmission();
+            }
+        });
+    }
+
+    function showEditForm() {
+        fetch(`https://localhost:7133/api/Assignments/${assignmentId}`, {
+            headers: { "Authorization": "Bearer " + token }
+        })
+        .then(r => r.json())
+        .then(assign => {
+            fetch("https://localhost:7133/api/Courses", { headers: { "Authorization": "Bearer " + token } })
+            .then(r => r.json())
+            .then(courses => {
+                let cHtml = courses.map(c => `<option value="${c.id}" ${c.id === assign.courseId ? 'selected' : ''}>${c.name}</option>`).join("");
+                let html = `
+                    <div class="card card-body mb-2">
+                        <input type="text" class="form-control mb-1" id="editTitle" value="${assign.title}">
+                        <textarea class="form-control mb-1" id="editDescription">${assign.description}</textarea>
+                        <input type="date" class="form-control mb-1" id="editDeadline" value="${assign.deadline ? assign.deadline.split('T')[0] : ''}">
+                        <select class="form-control mb-1" id="editCourse">${cHtml}</select>
+                        <button class="btn btn-success" onclick="saveEdit()">Kaydet</button>
+                        <button class="btn btn-secondary" onclick="document.getElementById('editAssignmentForm').style.display='none'">İptal</button>
+                    </div>`;
+                document.getElementById("editAssignmentForm").innerHTML = html;
+                document.getElementById("editAssignmentForm").style.display = "";
+            });
+        });
+    }
+    function saveEdit() {
+        fetch(`https://localhost:7133/api/Assignments`, {
+            method: "PUT",
+            headers: {
+                "Authorization": "Bearer " + token,
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                id: assignmentId,
+                title: document.getElementById("editTitle").value,
+                description: document.getElementById("editDescription").value,
+                deadline: document.getElementById("editDeadline").value,
+                courseId: document.getElementById("editCourse").value
+            })
+        })
+        .then(r => {
+            if (r.ok) {
+                document.getElementById("editAssignmentForm").style.display = "none";
+                loadAssignment();
+            } else throw "Güncellenemedi.";
+        });
+    }
+    function deleteAssignment() {
+        if (!confirm("Silmek istediğinize emin misiniz?")) return;
+        fetch(`https://localhost:7133/api/Assignments/${assignmentId}`, {
+            method: "DELETE",
+            headers: { "Authorization": "Bearer " + token }
+        })
+        .then(r => {
+            if (r.ok) window.location.href = "/Home/Assignments";
+            else throw "Silinemedi.";
+        });
+    }
+
+    function showSubmissionForm() {
+        document.getElementById("assignmentDetail").innerHTML += `
+            <form id="submissionForm" class="mt-3">
+                <textarea class="form-control mb-2" id="submissionText" placeholder="Teslim açıklaması veya linki"></textarea>
+                <button class="btn btn-success" type="submit">Gönder</button>
+            </form>
+            <div id="submissionMsg"></div>
+        `;
+        document.getElementById("submissionForm").onsubmit = function(e){
+            e.preventDefault();
+            fetch("https://localhost:7133/api/Submissions", {
+                method: "POST",
+                headers: {
+                    "Authorization": "Bearer " + token,
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ assignmentId: assignmentId, content: document.getElementById("submissionText").value })
+            })
+            .then(r => r.ok ? r.json() : Promise.reject("Teslim başarısız!"))
+            .then(() => {
+                document.getElementById("submissionMsg").innerHTML = `<div class="alert alert-success">Teslim edildi!</div>`;
+            })
+            .catch(err => document.getElementById("submissionMsg").innerHTML = `<div class="alert alert-danger">${err}</div>`);
+        };
+    }
+    function loadMySubmission() {
+        fetch(`https://localhost:7133/api/Submissions/student/${userInfo?.id}/assignment/${assignmentId}`, {
+            headers: { "Authorization": "Bearer " + token }
+        })
+        .then(r => r.ok ? r.json() : Promise.reject(""))
+        .then(sub => {
+            if(sub && sub.content) {
+                document.getElementById("assignmentDetail").innerHTML += `<div class="alert alert-info mt-2">Daha önce teslimin var: ${sub.content}</div>`;
+            }
+        });
+    }
+    function loadSubmissions() {
+        fetch(`https://localhost:7133/api/Submissions/assignment/${assignmentId}`, {
+            headers: { "Authorization": "Bearer " + token }
+        })
+        .then(r => r.json())
+        .then(data => {
+            let html = `<h4>Teslimler</h4><table class="table"><thead><tr><th>Öğrenci</th><th>İçerik</th><th>Puan</th><th>İşlem</th></tr></thead><tbody>`;
+            data.forEach(sub => {
+                html += `<tr>
+                    <td>${sub.studentName || "-"}</td>
+                    <td>${sub.content || "-"}</td>
+                    <td>${sub.grade || "-"}</td>
+                    <td>
+                        <button class="btn btn-primary btn-sm" onclick="gradeSubmission('${sub.id}')">Not Ver</button>
+                        <button class="btn btn-danger btn-sm" onclick="deleteSubmission('${sub.id}')">Sil</button>
+                    </td>
+                </tr>`;
+            });
+            html += `</tbody></table>`;
+            document.getElementById("submissionsList").innerHTML = html;
+        });
+    }
+    window.gradeSubmission = function(subId) {
+        let puan = prompt("Puan ver:");
+        if (!puan) return;
+        fetch("https://localhost:7133/api/Submissions/grade", {
+            method: "POST",
+            headers: {
+                "Authorization": "Bearer " + token,
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ submissionId: subId, grade: puan })
+        })
+        .then(r => {
+            if (r.ok) loadSubmissions();
+            else throw "Not verilemedi.";
+        });
+    }
+    window.deleteSubmission = function(subId) {
+        if (!confirm("Teslimi silmek istiyor musunuz?")) return;
+        fetch(`https://localhost:7133/api/Submissions/${subId}`, {
+            method: "DELETE",
+            headers: { "Authorization": "Bearer " + token }
+        })
+        .then(r => {
+            if (r.ok) loadSubmissions();
+            else throw "Silinemedi.";
+        });
+    }
+    loadAssignment();
+</script>

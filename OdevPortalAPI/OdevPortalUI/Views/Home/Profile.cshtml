@@ -1,0 +1,99 @@
+﻿@{
+    ViewData["Title"] = "Profilim";
+}
+<h3>Profil Bilgilerim</h3>
+<div id="profileInfo"></div>
+<hr>
+<h4>Profil Bilgilerini Güncelle</h4>
+<form id="updateProfileForm">
+    <div class="form-group">
+        <label>Yeni Ad Soyad</label>
+        <input type="text" id="newName" class="form-control mb-2" placeholder="Ad Soyad" required />
+        <label>Yeni E-posta</label>
+        <input type="email" id="newEmail" class="form-control mb-2" placeholder="E-posta" required />
+        <button class="btn btn-success" type="submit">Güncelle</button>
+    </div>
+</form>
+<div id="profileUpdateMsg"></div>
+<hr>
+<h4>Şifre Değiştir</h4>
+<form id="changePasswordForm">
+    <div class="form-group">
+        <input type="password" id="oldPassword" class="form-control mb-2" placeholder="Eski Şifre" required />
+        <input type="password" id="newPassword" class="form-control mb-2" placeholder="Yeni Şifre" required />
+        <input type="password" id="confirmPassword" class="form-control mb-2" placeholder="Yeni Şifre Tekrar" required />
+        <button class="btn btn-primary" type="submit">Şifreyi Değiştir</button>
+    </div>
+</form>
+<div id="profileMessage"></div>
+<script>
+    let token = localStorage.getItem("token");
+    function loadProfile() {
+        fetch("https://localhost:7133/api/Auth/userinfo", {
+            headers: { "Authorization": "Bearer " + token }
+        })
+        .then(r => r.ok ? r.json() : Promise.reject("Profil alınamadı."))
+        .then(user => {
+            document.getElementById("profileInfo").innerHTML = `
+                <div class="card card-body">
+                    <b>Kullanıcı Adı:</b> ${user.userName}<br>
+                    <b>E-posta:</b> ${user.email}<br>
+                    <b>Roller:</b> ${user.roles.join(", ")}
+                </div>
+            `;
+            document.getElementById("newName").value = user.userName;
+            document.getElementById("newEmail").value = user.email;
+        })
+        .catch(err => document.getElementById("profileInfo").innerHTML =
+            `<div class="alert alert-danger">${err}</div>`);
+    }
+    loadProfile();
+    document.getElementById("updateProfileForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+        let newName = document.getElementById("newName").value;
+        let newEmail = document.getElementById("newEmail").value;
+        fetch("https://localhost:7133/api/Auth/update-profile", {
+            method: "PUT",
+            headers: {
+                "Authorization": "Bearer " + token,
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ newUserName: newName, newEmail: newEmail })
+        })
+        .then(r => r.ok ? r.json() : Promise.reject("Profil güncellenemedi."))
+        .then(data => {
+            document.getElementById("profileUpdateMsg").innerHTML = `<div class="alert alert-success">${data.message || "Profil güncellendi."}</div>`;
+            loadProfile();
+        })
+        .catch(err => document.getElementById("profileUpdateMsg").innerHTML =
+            `<div class="alert alert-danger">${err}</div>`);
+    });
+    document.getElementById("changePasswordForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+        let oldPass = document.getElementById("oldPassword").value;
+        let newPass = document.getElementById("newPassword").value;
+        let confirmPass = document.getElementById("confirmPassword").value;
+        if (newPass !== confirmPass) {
+            document.getElementById("profileMessage").innerHTML = `<div class="alert alert-danger">Yeni şifreler eşleşmiyor.</div>`;
+            return;
+        }
+        fetch("https://localhost:7133/api/Auth/change-password", {
+            method: "POST",
+            headers: {
+                "Authorization": "Bearer " + token,
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                oldPassword: oldPass,
+                newPassword: newPass
+            })
+        })
+        .then(r => r.ok ? r.json() : Promise.reject("Şifre değiştirilemedi."))
+        .then(data => {
+            document.getElementById("profileMessage").innerHTML = `<div class="alert alert-success">${data.message || "Şifre başarıyla değiştirildi."}</div>`;
+            document.getElementById("changePasswordForm").reset();
+        })
+        .catch(err => document.getElementById("profileMessage").innerHTML =
+            `<div class="alert alert-danger">${err}</div>`);
+    });
+</script>

@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Kayıtlı Olduğum Dersler";
+}
+<h3>Kayıtlı Olduğum Dersler</h3>
+<div id="studentCourses"></div>
+<script>
+    let token = localStorage.getItem("token");
+    function loadStudentCourses() {
+        fetch("https://localhost:7133/api/Courses/student", {
+            headers: { "Authorization": "Bearer " + token }
+        })
+        .then(r => r.ok ? r.json() : Promise.reject("Dersler alınamadı."))
+        .then(data => {
+            let html = '<table class="table"><thead><tr><th>Ad</th><th>Açıklama</th><th>İşlem</th></tr></thead><tbody>';
+            data.forEach(course => {
+                html += `<tr>
+                    <td>${course.name}</td>
+                    <td>${course.description}</td>
+                    <td>
+                        <button class="btn btn-danger btn-sm" onclick="unenroll('${course.id}')">Kayıt Sil</button>
+                        <a class="btn btn-info btn-sm ms-1" href="/Home/CourseDetail?id=${course.id}">Detay</a>
+                    </td>
+                </tr>`;
+            });
+            html += '</tbody></table>';
+            document.getElementById("studentCourses").innerHTML = html;
+        })
+        .catch(err => document.getElementById("studentCourses").innerHTML = `<div class="alert alert-danger">${err}</div>`);
+    }
+    function unenroll(courseId) {
+        fetch(`https://localhost:7133/api/Courses/unenroll/${courseId}`, {
+            method: "DELETE",
+            headers: { "Authorization": "Bearer " + token }
+        })
+        .then(r => {
+            if (r.ok) loadStudentCourses();
+            else throw "Kayıt silinemedi.";
+        })
+        .catch(err => alert(err));
+    }
+    loadStudentCourses();
+</script>

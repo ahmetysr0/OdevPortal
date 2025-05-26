@@ -1,0 +1,110 @@
+﻿@{
+    ViewData["Title"] = "Ders Detay";
+}
+<div id="courseDetail"></div>
+<div id="editCourseForm" style="display:none;"></div>
+<div id="courseAssignments"></div>
+<script>
+    let token = localStorage.getItem("token");
+    let params = new URLSearchParams(window.location.search);
+    let courseId = params.get("id");
+    let userInfo = JSON.parse(localStorage.getItem("userInfo") || "null");
+
+    function loadCourse() {
+        fetch(`https://localhost:7133/api/Courses/${courseId}`, {
+            headers: { "Authorization": "Bearer " + token }
+        })
+        .then(r => r.json())
+        .then(course => {
+            let html = `<div class="card card-body mb-2">
+                <b>Ders Adı:</b> ${course.name} <br>
+                <b>Açıklama:</b> ${course.description} <br>
+                <b>Bölüm:</b> ${course.departmentName || "-"}
+                ${(userInfo && (userInfo.roles.includes("Teacher") || userInfo.roles.includes("Admin"))) ?
+                    `<button class="btn btn-warning btn-sm ms-3" onclick="showEditForm()">Düzenle</button>
+                     <button class="btn btn-danger btn-sm ms-1" onclick="deleteCourse()">Sil</button>` : ""}
+            </div>`;
+            document.getElementById("courseDetail").innerHTML = html;
+            loadCourseAssignments();
+        });
+    }
+
+    function showEditForm() {
+        fetch(`https://localhost:7133/api/Courses/${courseId}`, {
+            headers: { "Authorization": "Bearer " + token }
+        })
+        .then(r => r.json())
+        .then(course => {
+            fetch("https://localhost:7133/api/Departments", { headers: { "Authorization": "Bearer " + token } })
+            .then(r => r.json())
+            .then(depts => {
+                let dHtml = depts.map(d => `<option value="${d.id}" ${d.id === course.departmentId ? 'selected' : ''}>${d.name}</option>`).join("");
+                let html = `
+                    <div class="card card-body mb-2">
+                        <input type="text" class="form-control mb-1" id="editName" value="${course.name}">
+                        <textarea class="form-control mb-1" id="editDescription">${course.description}</textarea>
+                        <select class="form-control mb-1" id="editDept">${dHtml}</select>
+                        <button class="btn btn-success" onclick="saveEdit()">Kaydet</button>
+                        <button class="btn btn-secondary" onclick="document.getElementById('editCourseForm').style.display='none'">İptal</button>
+                    </div>`;
+                document.getElementById("editCourseForm").innerHTML = html;
+                document.getElementById("editCourseForm").style.display = "";
+            });
+        });
+    }
+
+    function saveEdit() {
+        fetch(`https://localhost:7133/api/Courses`, {
+            method: "PUT",
+            headers: {
+                "Authorization": "Bearer " + token,
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                id: courseId,
+                name: document.getElementById("editName").value,
+                description: document.getElementById("editDescription").value,
+                departmentId: document.getElementById("editDept").value
+            })
+        })
+        .then(r => {
+            if (r.ok) {
+                document.getElementById("editCourseForm").style.display = "none";
+                loadCourse();
+            } else throw "Güncellenemedi.";
+        });
+    }
+
+    function deleteCourse() {
+        if (!confirm("Silmek istediğinize emin misiniz?")) return;
+        fetch(`https://localhost:7133/api/Courses/${courseId}`, {
+            method: "DELETE",
+            headers: { "Authorization": "Bearer " + token }
+        })
+        .then(r => {
+            if (r.ok) window.location.href = "/Home/Courses";
+            else throw "Silinemedi.";
+        });
+    }
+
+    function loadCourseAssignments() {
+        fetch(`https://localhost:7133/api/Assignments/course/${courseId}`, {
+            headers: { "Authorization": "Bearer " + token }
+        })
+        .then(r => r.json())
+        .then(data => {
+            let html = `<h4>Dersin Ödevleri</h4>
+                <table class="table"><thead><tr><th>Başlık</th><th>Açıklama</th><th>Teslim Tarihi</th></tr></thead><tbody>`;
+            data.forEach(assign => {
+                html += `<tr>
+                    <td><a href="/Home/AssignmentDetail?id=${assign.id}">${assign.title}</a></td>
+                    <td>${assign.description}</td>
+                    <td>${assign.deadline ? assign.deadline.split('T')[0] : ''}</td>
+                </tr>`;
+            });
+            html += "</tbody></table>";
+            document.getElementById("courseAssignments").innerHTML = html;
+        });
+    }
+    loadCourse();
+</script>

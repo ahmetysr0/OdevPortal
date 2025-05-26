@@ -1,0 +1,86 @@
+﻿@{
+    ViewData["Title"] = "Bölümler";
+}
+<h3>Bölümler</h3>
+<div id="departmentTable"></div>
+<div class="mb-2">
+    <button class="btn btn-success" id="addDepartmentBtn" style="display:none;">Yeni Bölüm Ekle</button>
+</div>
+<div id="addDepartmentForm" style="display:none;">
+    <input type="text" class="form-control mb-1" id="departmentName" placeholder="Bölüm Adı">
+    <textarea class="form-control mb-1" id="departmentDescription" placeholder="Açıklama"></textarea>
+    <button class="btn btn-primary" id="saveDepartment">Kaydet</button>
+    <button class="btn btn-secondary" onclick="document.getElementById('addDepartmentForm').style.display='none'">İptal</button>
+</div>
+<div id="deptMsg"></div>
+<script>
+    let token = localStorage.getItem("token");
+    let userInfo = JSON.parse(localStorage.getItem("userInfo") || "null");
+
+    function loadDepartments() {
+        fetch("https://localhost:7133/api/Departments", { headers: { "Authorization": "Bearer " + token } })
+        .then(r => r.ok ? r.json() : Promise.reject("Bölümler alınamadı."))
+        .then(data => {
+            let html = '<table class="table table-bordered"><thead><tr><th>Ad</th><th>Açıklama</th><th>İşlem</th></tr></thead><tbody>';
+            data.forEach(dep => {
+                html += `<tr>
+                    <td>${dep.name}</td>
+                    <td>${dep.description}</td>
+                    <td>
+                        ${(userInfo && userInfo.roles.includes("Admin")) ?
+                        `<button class="btn btn-warning btn-sm ms-1" onclick="editDepartment('${dep.id}')">Düzenle</button>
+                        <button class="btn btn-danger btn-sm ms-1" onclick="deleteDepartment('${dep.id}')">Sil</button>` : ""}
+                    </td>
+                </tr>`;
+            });
+            html += '</tbody></table>';
+            document.getElementById("departmentTable").innerHTML = html;
+        })
+        .catch(err => document.getElementById("departmentTable").innerHTML =
+            `<div class="alert alert-danger">${err}</div>`);
+    }
+
+    if (userInfo && userInfo.roles.includes("Admin")) {
+        document.getElementById("addDepartmentBtn").style.display = "";
+        document.getElementById("addDepartmentBtn").onclick = function() {
+            document.getElementById("addDepartmentForm").style.display = "";
+        };
+        document.getElementById("saveDepartment").onclick = function() {
+            let name = document.getElementById("departmentName").value;
+            let description = document.getElementById("departmentDescription").value;
+            fetch("https://localhost:7133/api/Departments", {
+                method: "POST",
+                headers: {
+                    "Authorization": "Bearer " + token,
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ name, description })
+            })
+            .then(r => {
+                if (r.ok) {
+                    loadDepartments();
+                    document.getElementById("addDepartmentForm").style.display = "none";
+                    document.getElementById("deptMsg").innerHTML = '<div class="alert alert-success">Bölüm eklendi!</div>';
+                } else throw "Bölüm eklenemedi.";
+            })
+            .catch(err => document.getElementById("deptMsg").innerHTML =
+                `<div class="alert alert-danger">${err}</div>`);
+        };
+    }
+
+    window.deleteDepartment = function(id) {
+        if (!confirm("Silmek istediğinize emin misiniz?")) return;
+        fetch(`https://localhost:7133/api/Departments/${id}`, {
+            method: "DELETE",
+            headers: { "Authorization": "Bearer " + token }
+        })
+        .then(r => {
+            if (r.ok) loadDepartments();
+            else throw "Silinemedi.";
+        })
+        .catch(err => alert(err));
+    };
+
+    // editDepartment fonksiyonunu istersen detaylı ekleyebilirim
+    loadDepartments();
+</script>

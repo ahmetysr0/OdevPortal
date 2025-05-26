@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\OdevPortalAPI",
+    "\\OdevPortalAPI\\Migrations",
+    "\\OdevPortalUI",
+    "\\OdevPortalUI\\Views",
+    "\\OdevPortalUI\\Views\\Home"
+  ],
+  "SelectedNode": "\\OdevPortalUI\\Views\\Home\\Index.cshtml",
+  "PreviewInSolutionExplorer": false
+}

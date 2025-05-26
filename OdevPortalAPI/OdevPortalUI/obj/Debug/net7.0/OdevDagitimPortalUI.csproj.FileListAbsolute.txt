@@ -1,0 +1,70 @@
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalUI\obj\Debug\net7.0\OdevDagitimPortalUI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalUI\obj\Debug\net7.0\OdevDagitimPortalUI.AssemblyInfoInputs.cache
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalUI\obj\Debug\net7.0\OdevDagitimPortalUI.AssemblyInfo.cs
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalUI\obj\Debug\net7.0\OdevDagitimPortalUI.csproj.CoreCompileInputs.cache
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalUI\obj\Debug\net7.0\OdevDagitimPortalUI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalUI\obj\Debug\net7.0\OdevDagitimPortalUI.RazorAssemblyInfo.cache
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalUI\obj\Debug\net7.0\OdevDagitimPortalUI.RazorAssemblyInfo.cs
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalUI\obj\Debug\net7.0\OdevDagitimPortalUI.sourcelink.json
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalUI\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalUI\bin\Debug\net7.0\appsettings.json
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalUI\bin\Debug\net7.0\OdevDagitimPortalUI.staticwebassets.runtime.json
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalUI\bin\Debug\net7.0\OdevDagitimPortalUI.staticwebassets.endpoints.json
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalUI\bin\Debug\net7.0\OdevDagitimPortalUI.exe
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalUI\bin\Debug\net7.0\OdevDagitimPortalUI.deps.json
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalUI\bin\Debug\net7.0\OdevDagitimPortalUI.runtimeconfig.json
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalUI\bin\Debug\net7.0\OdevDagitimPortalUI.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalUI\bin\Debug\net7.0\OdevDagitimPortalUI.pdb
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalUI\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalUI\obj\Debug\net7.0\scopedcss\bundle\OdevDagitimPortalUI.styles.css
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalUI\obj\Debug\net7.0\scopedcss\projectbundle\OdevDagitimPortalUI.bundle.scp.css
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalUI\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalUI\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalUI\obj\Debug\net7.0\staticwebassets.build.endpoints.json
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalUI\obj\Debug\net7.0\staticwebassets\msbuild.OdevDagitimPortalUI.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalUI\obj\Debug\net7.0\staticwebassets\msbuild.OdevDagitimPortalUI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalUI\obj\Debug\net7.0\staticwebassets\msbuild.build.OdevDagitimPortalUI.props
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalUI\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.OdevDagitimPortalUI.props
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalUI\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.OdevDagitimPortalUI.props
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalUI\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalUI\obj\Debug\net7.0\staticwebassets.upToDateCheck.txt
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalUI\obj\Debug\net7.0\OdevDagitimPortalUI.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalUI\obj\Debug\net7.0\refint\OdevDagitimPortalUI.dll
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalUI\obj\Debug\net7.0\OdevDagitimPortalUI.pdb
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalUI\obj\Debug\net7.0\OdevDagitimPortalUI.genruntimeconfig.cache
+C:\Users\gurka\OneDrive\Masaüstü\IP\OdevDagitimPortalAPI hikmet\OdevDagitimPortalUI\obj\Debug\net7.0\ref\OdevDagitimPortalUI.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalUI\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalUI\bin\Debug\net7.0\appsettings.json
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalUI\bin\Debug\net7.0\OdevDagitimPortalUI.staticwebassets.endpoints.json
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalUI\bin\Debug\net7.0\OdevDagitimPortalUI.staticwebassets.runtime.json
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalUI\bin\Debug\net7.0\OdevDagitimPortalUI.exe
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalUI\bin\Debug\net7.0\OdevDagitimPortalUI.deps.json
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalUI\bin\Debug\net7.0\OdevDagitimPortalUI.runtimeconfig.json
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalUI\bin\Debug\net7.0\OdevDagitimPortalUI.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalUI\bin\Debug\net7.0\OdevDagitimPortalUI.pdb
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalUI\obj\Debug\net7.0\OdevDagitimPortalUI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalUI\obj\Debug\net7.0\OdevDagitimPortalUI.AssemblyInfoInputs.cache
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalUI\obj\Debug\net7.0\OdevDagitimPortalUI.AssemblyInfo.cs
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalUI\obj\Debug\net7.0\OdevDagitimPortalUI.csproj.CoreCompileInputs.cache
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalUI\obj\Debug\net7.0\OdevDagitimPortalUI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalUI\obj\Debug\net7.0\OdevDagitimPortalUI.RazorAssemblyInfo.cache
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalUI\obj\Debug\net7.0\OdevDagitimPortalUI.RazorAssemblyInfo.cs
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalUI\obj\Debug\net7.0\OdevDagitimPortalUI.sourcelink.json
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalUI\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalUI\obj\Debug\net7.0\scopedcss\bundle\OdevDagitimPortalUI.styles.css
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalUI\obj\Debug\net7.0\scopedcss\projectbundle\OdevDagitimPortalUI.bundle.scp.css
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalUI\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalUI\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalUI\obj\Debug\net7.0\staticwebassets.build.endpoints.json
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalUI\obj\Debug\net7.0\staticwebassets\msbuild.OdevDagitimPortalUI.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalUI\obj\Debug\net7.0\staticwebassets\msbuild.OdevDagitimPortalUI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalUI\obj\Debug\net7.0\staticwebassets\msbuild.build.OdevDagitimPortalUI.props
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalUI\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.OdevDagitimPortalUI.props
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalUI\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.OdevDagitimPortalUI.props
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalUI\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalUI\obj\Debug\net7.0\staticwebassets.upToDateCheck.txt
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalUI\obj\Debug\net7.0\OdevDagitimPortalUI.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalUI\obj\Debug\net7.0\refint\OdevDagitimPortalUI.dll
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalUI\obj\Debug\net7.0\OdevDagitimPortalUI.pdb
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalUI\obj\Debug\net7.0\OdevDagitimPortalUI.genruntimeconfig.cache
+C:\Users\gurka\OneDrive\Masaüstü\finals\OdevDagitimPortal\OdevDagitimPortalUI\obj\Debug\net7.0\ref\OdevDagitimPortalUI.dll

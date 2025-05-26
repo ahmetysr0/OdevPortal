@@ -1,0 +1,154 @@
+﻿@{
+    ViewData["Title"] = "Ana Sayfa";
+    var userName = User.Identity.IsAuthenticated ? User.Identity.Name : "Kullanıcı";
+}
+<style>
+    body, html {
+        height: 100%;
+        margin: 0;
+        background: linear-gradient(120deg, #e9f8ef 0%, #d2f1fa 100%);
+        font-family: 'Segoe UI', 'Arial', sans-serif;
+    }
+
+    .welcome-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 80vh;
+        padding: 3vw 0;
+    }
+
+    .welcome-card {
+        background: #ffffffcc;
+        box-shadow: 0 6px 32px 0 rgba(44, 183, 125, .13);
+        border-radius: 28px;
+        padding: 46px 38px 36px 38px;
+        text-align: center;
+        max-width: 540px;
+        margin: auto;
+        backdrop-filter: blur(3px);
+    }
+
+    .welcome-icon {
+        font-size: 3.5em;
+        color: #37b980;
+        margin-bottom: 18px;
+        animation: welcome-pop 1s cubic-bezier(.23,1.67,.72,.87);
+    }
+    
+
+    .welcome-title {
+        font-size: 2.6em;
+        font-weight: 700;
+        margin-bottom: 18px;
+        color: #276c5e;
+        letter-spacing: 0.5px;
+    }
+
+    .welcome-desc {
+        color: #3b4a5c;
+        font-size: 1.14em;
+        margin-bottom: 32px;
+    }
+
+    .quick-links {
+        display: flex;
+        gap: 24px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 6px;
+    }
+
+    .quick-link-card {
+        background: linear-gradient(120deg, #e5fff4 70%, #f7fbfa 100%);
+        border-radius: 18px;
+        padding: 20px 32px 18px 32px;
+        min-width: 150px;
+        max-width: 180px;
+        box-shadow: 0 2px 14px 0 rgba(44,183,125,.07);
+        transition: transform 0.16s, box-shadow 0.16s;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1.5px solid #e7f7e8;
+        position: relative;
+        overflow: hidden;
+    }
+
+        .quick-link-card:hover {
+            transform: translateY(-4px) scale(1.035);
+            box-shadow: 0 8px 32px 0 rgba(44,183,125,.13);
+            border: 1.5px solid #37b98033;
+        }
+
+    .quick-link-icon {
+        font-size: 2.1em;
+        margin-bottom: 10px;
+        color: #37b980;
+        background: #e0f7ea;
+        border-radius: 50%;
+        padding: 11px 15px 10px 15px;
+        margin-top: -18px;
+        margin-bottom: 10px;
+        box-shadow: 0 2px 8px 0 #37b98011;
+    }
+
+    .quick-link-title {
+        font-weight: 700;
+        color: #299c7f;
+        font-size: 1.17em;
+        margin-bottom: 5px;
+        letter-spacing: 0.2px;
+    }
+
+    .quick-link-desc {
+        font-size: 0.97em;
+        color: #42527c;
+        margin-bottom: 2px;
+    }
+
+    .footer-success {
+        margin-top: 34px;
+        color: #b2c7be;
+        font-size: 1em;
+        letter-spacing: 0.2px;
+    }
+
+    
+</style>
+<div class="welcome-container">
+    <div class="welcome-card">
+        <div class="welcome-icon">
+            <span>🌿</span>
+        </div>
+        <div class="welcome-title">
+            Merhaba, @userName!
+        </div>
+        <div class="welcome-desc">
+            <b>Ödev Portalı</b>'na tekrar hoş geldin.<br>
+            Buradan <b>derslerini</b>, <b>ödevlerini</b> ve <b>bildirimlerini</b> kolayca yönetebilirsin.
+        </div>
+        <div class="quick-links">
+            <a href="/Home/Assignments" class="quick-link-card">
+                <div class="quick-link-icon"><i class="fa-solid fa-list-check"></i></div>
+                <div class="quick-link-title">Ödevlerim</div>
+                <div class="quick-link-desc">Tüm ödevlerini görüntüle</div>
+            </a>
+            <a href="/Home/Courses" class="quick-link-card">
+                <div class="quick-link-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <div class="quick-link-title">Dersler</div>
+                <div class="quick-link-desc">Ders listeni incele</div>
+            </a>
+            <a href="/Home/Notifications" class="quick-link-card">
+                <div class="quick-link-icon"><i class="fa-solid fa-bell"></i></div>
+                <div class="quick-link-title">Bildirimler</div>
+                <div class="quick-link-desc">Duyuruları takip et</div>
+            </a>
+        </div>
+        <div class="footer-success">
+            Başarılar ve iyi çalışmalar! 🌱
+        </div>
+    </div>
+</div>

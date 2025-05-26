@@ -1,0 +1,159 @@
+﻿@{
+    ViewData["Title"] = "Tüm Dersler";
+}
+<h3>Tüm Dersler</h3>
+<div id="courseTable"></div>
+<div class="mb-2">
+    <button class="btn btn-success" id="addCourseBtn" style="display:none;">Yeni Ders Ekle</button>
+</div>
+<div id="addCourseForm" style="display:none;">
+    <input type="text" class="form-control mb-1" id="courseCode" placeholder="Ders Kodu">
+    <input type="text" class="form-control mb-1" id="courseName" placeholder="Ders Adı">
+    <textarea class="form-control mb-1" id="courseDescription" placeholder="Açıklama"></textarea>
+    <select class="form-control mb-1" id="courseDepartment"></select>
+    <input type="text" class="form-control mb-1" id="courseSemester" placeholder="Dönem (örn: Bahar)">
+    <select class="form-control mb-1" id="courseTeacher"></select>
+    <button class="btn btn-primary" id="saveCourse">Kaydet</button>
+    <button class="btn btn-secondary" onclick="document.getElementById('addCourseForm').style.display='none'">İptal</button>
+</div>
+<div id="courseMsg"></div>
+<script>
+    let token = localStorage.getItem("token");
+    let userInfo = JSON.parse(localStorage.getItem("userInfo") || "null");
+
+    function loadCourses() {
+        fetch("https://localhost:7133/api/Courses", { headers: { "Authorization": "Bearer " + token } })
+        .then(r => r.ok ? r.json() : Promise.reject("Dersler alınamadı."))
+        .then(data => {
+            let html = '<table class="table table-bordered"><thead><tr><th>Kodu</th><th>Ad</th><th>Açıklama</th><th>Bölüm</th><th>Dönem</th><th>Öğretmen</th><th>İşlem</th></tr></thead><tbody>';
+            data.forEach(course => {
+                html += `<tr>
+                    <td>${course.code || "-"}</td>
+                    <td><a href="/Home/CourseDetail?id=${course.id}">${course.name}</a></td>
+                    <td>${course.description}</td>
+                    <td>${course.departmentName || "-"}</td>
+                    <td>${course.semester || "-"}</td>
+                    <td>${course.teacherName || "-"}</td>
+                    <td>
+                        <a class="btn btn-info btn-sm" href="/Home/CourseDetail?id=${course.id}">Detay</a>
+                        ${(userInfo && (userInfo.roles.includes("Teacher") || userInfo.roles.includes("Admin"))) ?
+                        `<button class="btn btn-warning btn-sm ms-1" onclick="editCourse('${course.id}')">Düzenle</button>
+                        <button class="btn btn-danger btn-sm ms-1" onclick="deleteCourse('${course.id}')">Sil</button>` : ""}
+                        ${(userInfo && userInfo.roles.includes("Student")) ?
+                        `<button class="btn btn-success btn-sm ms-1" onclick="enroll('${course.id}')">Kayıt Ol</button>` : ""}
+                    </td>
+                </tr>`;
+            });
+            html += '</tbody></table>';
+            document.getElementById("courseTable").innerHTML = html;
+        })
+        .catch(err => document.getElementById("courseTable").innerHTML =
+            `<div class="alert alert-danger">${err}</div>`);
+    }
+
+    function loadDepartmentsSelect() {
+        fetch("https://localhost:7133/api/Departments", { headers: { "Authorization": "Bearer " + token } })
+        .then(r => r.json())
+        .then(data => {
+            let select = document.getElementById("courseDepartment");
+            select.innerHTML = '<option value="">Bölüm Seçiniz</option>';
+            data.forEach(d => {
+                let option = document.createElement("option");
+                option.value = d.id;
+                option.text = d.name;
+                select.appendChild(option);
+            });
+        });
+    }
+
+    function loadTeachersSelect() {
+        fetch("https://localhost:7133/api/Auth/users", { headers: { "Authorization": "Bearer " + token } })
+        .then(r => r.json())
+        .then(users => {
+            let teachers = users.filter(u => Array.isArray(u.roles) && u.roles.includes("Teacher"));
+            let select = document.getElementById("courseTeacher");
+            select.innerHTML = '<option value="">Öğretmen Seçiniz</option>';
+            teachers.forEach(t => {
+                let option = document.createElement("option");
+                option.value = t.id; // DİKKAT: SADECE t.id!
+                option.text = `${t.userName} (${t.email})`;
+                select.appendChild(option);
+            });
+        });
+    }
+
+    if (userInfo && (userInfo.roles.includes("Teacher") || userInfo.roles.includes("Admin"))) {
+        document.getElementById("addCourseBtn").style.display = "";
+        document.getElementById("addCourseBtn").onclick = function() {
+            document.getElementById("addCourseForm").style.display = "";
+            loadDepartmentsSelect();
+            loadTeachersSelect();
+        };
+        document.getElementById("saveCourse").onclick = function() {
+            let code = document.getElementById("courseCode").value.trim();
+            let name = document.getElementById("courseName").value.trim();
+            let description = document.getElementById("courseDescription").value.trim();
+            let departmentId = document.getElementById("courseDepartment").value;
+            let semester = document.getElementById("courseSemester").value.trim();
+            let teacherId = document.getElementById("courseTeacher").value;
+
+            if(!code || !name || !description || !departmentId || !semester || !teacherId) {
+                document.getElementById("courseMsg").innerHTML = '<div class="alert alert-danger">Tüm alanları doldurmalısınız ve mutlaka bir öğretmen seçmelisiniz.</div>';
+                return;
+            }
+            // TeacherId'nin bir GUID olup olmadığını kontrol et
+            let guidRegex = /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/;
+            if (!guidRegex.test(teacherId)) {
+                document.getElementById("courseMsg").innerHTML = '<div class="alert alert-danger">Bir öğretmen seçmelisiniz.</div>';
+                return;
+            }
+
+            fetch("https://localhost:7133/api/Courses", {
+                method: "POST",
+                headers: {
+                    "Authorization": "Bearer " + token,
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ code, name, description, departmentId, semester, teacherId })
+            })
+            .then(r => {
+                if (r.ok) {
+                    loadCourses();
+                    document.getElementById("addCourseForm").style.display = "none";
+                    document.getElementById("courseMsg").innerHTML = '<div class="alert alert-success">Ders eklendi!</div>';
+                } else {
+                    return r.text().then(t => { throw (t ? t : "Ders eklenemedi.") });
+                }
+            })
+            .catch(err => document.getElementById("courseMsg").innerHTML =
+                `<div class="alert alert-danger">${err}</div>`);
+        };
+    }
+
+    window.deleteCourse = function(id) {
+        if (!confirm("Silmek istediğinize emin misiniz?")) return;
+        fetch(`https://localhost:7133/api/Courses/${id}`, {
+            method: "DELETE",
+            headers: { "Authorization": "Bearer " + token }
+        })
+        .then(r => {
+            if (r.ok) loadCourses();
+            else throw "Silinemedi.";
+        })
+        .catch(err => alert(err));
+    };
+
+    window.enroll = function(courseId) {
+        fetch(`https://localhost:7133/api/Courses/enroll/${courseId}`, {
+            method: "POST",
+            headers: { "Authorization": "Bearer " + token }
+        })
+        .then(r => {
+            if (r.ok) alert("Derse kayıt olundu.");
+            else throw "Kayıt olunamadı.";
+        })
+        .catch(err => alert(err));
+    };
+
+    loadCourses();
+</script>

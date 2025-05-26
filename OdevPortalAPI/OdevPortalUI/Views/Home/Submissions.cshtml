@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Teslimlerim";
+}
+<h3>Teslimlerim</h3>
+<div id="submissionTable"></div>
+<script>
+    let token = localStorage.getItem("token");
+    let userInfo = JSON.parse(localStorage.getItem("userInfo") || "null");
+    function loadSubmissions() {
+        let url = userInfo.roles.includes("Student") ?
+            "https://localhost:7133/api/Submissions/student" :
+            "https://localhost:7133/api/Submissions";
+        fetch(url, { headers: { "Authorization": "Bearer " + token } })
+        .then(r => r.ok ? r.json() : Promise.reject("Teslimler alınamadı."))
+        .then(data => {
+            let html = '<table class="table"><thead><tr><th>Ödev</th><th>İçerik</th><th>Puan</th><th>İşlem</th></tr></thead><tbody>';
+            data.forEach(sub => {
+                html += `<tr>
+                    <td>${sub.assignmentTitle || "-"}</td>
+                    <td>${sub.content || "-"}</td>
+                    <td>${sub.grade || "-"}</td>
+                    <td>
+                        <a class="btn btn-info btn-sm" href="/Home/SubmissionDetail?id=${sub.id}">Detay</a>
+                        <button class="btn btn-danger btn-sm ms-1" onclick="deleteSubmission('${sub.id}')">Sil</button>
+                    </td>
+                </tr>`;
+            });
+            html += '</tbody></table>';
+            document.getElementById("submissionTable").innerHTML = html;
+        })
+        .catch(err => document.getElementById("submissionTable").innerHTML =
+            `<div class="alert alert-danger">${err}</div>`);
+    }
+    window.deleteSubmission = function(id) {
+        if (!confirm("Silmek istediğinize emin misiniz?")) return;
+        fetch(`https://localhost:7133/api/Submissions/${id}`, {
+            method: "DELETE",
+            headers: { "Authorization": "Bearer " + token }
+        })
+        .then(r => {
+            if (r.ok) loadSubmissions();
+            else throw "Silinemedi.";
+        });
+    };
+    loadSubmissions();
+</script>

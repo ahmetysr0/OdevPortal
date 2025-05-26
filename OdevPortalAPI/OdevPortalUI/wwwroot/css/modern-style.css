@@ -1,0 +1,197 @@
+﻿/* Genel arka plan ve font ayarları */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #e8f0fe 0%, #f8fafc 100%);
+    color: #26334d;
+}
+
+/* Hoş geldin kartı */
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 75vh;
+    margin-top: 3vw;
+}
+
+.welcome-card {
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 8px 32px 0 rgba(99,132,255,0.17), 0 2px 4px 0 rgba(44,62,80,0.07);
+    border-radius: 26px;
+    padding: 54px 38px 36px 38px;
+    text-align: center;
+    max-width: 500px;
+    margin: auto;
+    transition: box-shadow 0.2s;
+}
+
+    .welcome-card:hover {
+        box-shadow: 0 10px 38px 0 rgba(99,132,255,0.27), 0 2px 10px 0 rgba(44,62,80,0.12);
+    }
+
+.welcome-icon {
+    font-size: 3.5em;
+    color: #4f8cff;
+    margin-bottom: 16px;
+    filter: drop-shadow(0 3px 8px #b3d0ffcc);
+}
+
+.welcome-title {
+    font-size: 2.4em;
+    font-weight: 800;
+    margin-bottom: 16px;
+    color: #30447c;
+    letter-spacing: -1px;
+}
+
+.welcome-desc {
+    color: #485675;
+    font-size: 1.13em;
+    margin-bottom: 30px;
+}
+
+/* Hızlı linkler */
+.quick-links {
+    display: flex;
+    gap: 22px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.quick-link-card {
+    background: linear-gradient(120deg, #f3f6ff 70%, #e6f2fd 100%);
+    border-radius: 16px;
+    padding: 18px 28px;
+    min-width: 135px;
+    box-shadow: 0 4px 16px 0 rgba(99,132,255,0.10);
+    border: 1px solid #e4eaff;
+    transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+    cursor: pointer;
+    text-decoration: none !important;
+}
+
+    .quick-link-card:hover {
+        transform: translateY(-3px) scale(1.04) rotate(-2deg);
+        box-shadow: 0 8px 32px 0 rgba(99,132,255,0.12);
+        border-color: #b6d0ff;
+        background: linear-gradient(115deg, #ecf3ff 40%, #e0f2fe 100%);
+    }
+
+.quick-link-title {
+    font-weight: 700;
+    color: #4f8cff;
+    font-size: 1.10em;
+    margin-bottom: 5px;
+    letter-spacing: 0.4px;
+}
+
+.quick-link-desc {
+    font-size: 0.99em;
+    color: #42527c;
+}
+
+@media (max-width: 650px) {
+    .welcome-card {
+        padding: 33px 10px 20px 10px;
+        max-width: 97vw;
+    }
+
+    .quick-links {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .quick-link-card {
+        min-width: unset;
+        width: 100%;
+        padding: 15px 12px;
+    }
+}
+
+/* Sidebar ve içerik alanı */
+.sidebar {
+    background: linear-gradient(180deg, #386be7 0%, #5fa8ff 100%);
+    min-height: 100vh;
+    width: 225px;
+    padding-top: 32px;
+    position: fixed;
+    box-shadow: 2px 0 10px 0 #c9e0ff33;
+    z-index: 11;
+    border-top-right-radius: 28px;
+}
+
+    .sidebar .nav-link, .sidebar .navbar-brand {
+        color: #fff !important;
+        transition: background 0.15s, color 0.15s;
+    }
+
+        .sidebar .nav-link.active {
+            background: rgba(255,255,255,0.15);
+            border-radius: 10px;
+        }
+
+        .sidebar .nav-link:hover {
+            background: rgba(255,255,255,0.25);
+            color: #fff;
+            transform: translateX(2px) scale(1.03);
+        }
+
+    .sidebar .navbar-brand {
+        font-weight: bold;
+        font-size: 1.35rem;
+        letter-spacing: 0.7px;
+        margin-bottom: 34px;
+        color: #fff !important;
+    }
+
+.nav-link i {
+    width: 22px;
+    margin-right: 6px;
+}
+
+.content {
+    margin-left: 230px;
+    padding: 28px 36px 36px 36px;
+    min-height: 100vh;
+    background: none;
+}
+
+.profile-bar {
+    position: absolute;
+    top: 24px;
+    right: 34px;
+    color: #7d8ba6;
+    font-weight: 500;
+    font-size: 1.02em;
+    letter-spacing: 0.1px;
+}
+
+.card {
+    background: #fff !important;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px 0 #e4eaff63;
+    border: none;
+}
+
+@media (max-width: 800px) {
+    .sidebar {
+        width: 60px;
+        padding-top: 12px;
+        overflow-x: hidden;
+    }
+
+        .sidebar .navbar-brand,
+        .sidebar .nav-link span,
+        .sidebar .nav-link .quick-link-title {
+            display: none;
+        }
+
+    .content {
+        margin-left: 65px;
+        padding: 18px 5vw 24px 5vw;
+    }
+}

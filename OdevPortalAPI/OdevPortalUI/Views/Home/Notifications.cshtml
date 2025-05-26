@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "Bildirimler";
+}
+<h3>Bildirimler</h3>
+<div id="notificationTable"></div>
+<button class="btn btn-primary mb-2" onclick="markAllRead()">Tümünü Okundu Yap</button>
+<script>
+    let token = localStorage.getItem("token");
+    function loadNotifications() {
+        fetch("https://localhost:7133/api/Notifications", { headers: { "Authorization": "Bearer " + token } })
+        .then(r => r.ok ? r.json() : Promise.reject("Bildirimler alınamadı."))
+        .then(data => {
+            let html = '<table class="table"><thead><tr><th>İçerik</th><th>Okundu</th><th>İşlem</th></tr></thead><tbody>';
+            data.forEach(n => {
+                html += `<tr>
+                    <td>${n.content}</td>
+                    <td>${n.isRead ? "Evet" : "Hayır"}</td>
+                    <td>
+                        ${n.isRead ? "" : `<button class="btn btn-success btn-sm" onclick="markRead('${n.id}')">Okundu Yap</button>`}
+                    </td>
+                </tr>`;
+            });
+            html += '</tbody></table>';
+            document.getElementById("notificationTable").innerHTML = html;
+        })
+        .catch(err => document.getElementById("notificationTable").innerHTML =
+            `<div class="alert alert-danger">${err}</div>`);
+    }
+    window.markRead = function(id) {
+        fetch(`https://localhost:7133/api/Notifications/read/${id}`, {
+            method: "PUT",
+            headers: { "Authorization": "Bearer " + token }
+        })
+        .then(r => {
+            if (r.ok) loadNotifications();
+            else throw "Okundu yapılamadı.";
+        });
+    };
+    window.markAllRead = function() {
+        fetch(`https://localhost:7133/api/Notifications/read-all`, {
+            method: "PUT",
+            headers: { "Authorization": "Bearer " + token }
+        })
+        .then(r => {
+            if (r.ok) loadNotifications();
+            else throw "Okundu yapılamadı.";
+        });
+    };
+    loadNotifications();
+</script>
